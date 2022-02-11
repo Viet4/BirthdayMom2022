@@ -1,0 +1,461 @@
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Freckle+Face);
+body {
+  background: #85cfde;
+  color: #333;
+  overflow: hidden;
+	font: 100% Arial, Sans Serif;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.dark {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(29, 25, 52, 0.9);
+  z-index: 5000;
+}
+
+h1, h2 {
+  position: relative;
+  text-align: center;
+  font-family: "Freckle Face", cursive;
+  text-shadow: 1px 1px 1px rgba(77, 77, 77, 0.5);
+  z-index: 1000;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 4.5rem;
+  font-size: 8vw;
+}
+
+h2 {
+  font-size: 6vw;
+  font-family: "Freckle Face", cursive;
+}
+
+.soil {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #705f46;
+}
+.grass {
+  position: absolute;
+  bottom: 4rem;
+  display: flex;
+  width: 100%;
+  height: 1rem;
+  background-color: #46704e;
+}
+
+.sun {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: khaki;
+  border-radius: 100%;
+  box-shadow: 0 0 20px khaki;
+}
+.sun_2 {
+  top: 2.5rem;
+  left: 2.5rem;
+  width: 5rem;
+  height: 5rem;
+  background: #f5b336;
+}
+.sun_3 {
+  top: 3rem;
+  left: 3rem;
+  width: 4rem;
+  height: 4rem;
+  background: #f57c36;
+}
+
+.flowers {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.flower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flower_head {
+  height: 7rem;
+  width: 7rem;
+  background: #bf88be;
+  border-radius: 100%;
+}
+.flower_stem {
+  width: 0.5rem;
+  height: 20rem;
+  max-height: 0;
+  background: #86af6e;
+}
+.flower_stem::before {
+  content: "";
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  width: 3em;
+  height: 3em;
+  display: block;
+  background: #4d916e;
+  border-radius: 2em 0 2em 0em;
+}
+.flower_stem::after {
+  content: "";
+  margin-left: -3rem;
+  margin-top: 1rem;
+  width: 3em;
+  height: 3em;
+  display: block;
+  background: #4d916e;
+  border-radius: 0 2em 0em 2em;
+}
+.flower_size {
+  width: 0; 
+  height: 0; 
+  border-top: 5rem solid transparent;
+  border-bottom: 0rem solid transparent; 
+}
+.flower_size_middle {
+  width: 0; 
+  height: 0; 
+  margin-top: -4.5rem;
+}
+
+.purple_left_tulip {
+  border-left: 5rem solid #bf88be; 
+  margin-top: -2rem;
+}
+.purple_right_tulip {
+  border-right: 5rem solid #bf88be; 
+  margin-top: -5rem;
+  margin-left: 2rem;
+}
+.purple_middle_tulip {
+  border-left: 3.5rem solid transparent;
+  border-right: 3.5rem solid transparent; 
+  border-bottom: 5rem solid #bf88be; 
+}
+
+.yellow {
+  width: 7.5rem;
+  height: 7.5rem;
+  background: #c6de83;
+}
+.yellow_left_tulip {
+  border-left: 5rem solid #c6de83; 
+  margin-top: -2rem;
+}
+.yellow_right_tulip {
+  border-right: 5rem solid #c6de83; 
+  margin-top: -5rem;
+  margin-left: 2.5rem;
+}
+.yellow_middle_tulip {
+  border-left: 3.75rem solid transparent;
+  border-right: 3.75rem solid transparent; 
+  border-bottom: 5rem solid #c6de83; 
+}
+
+.pink {
+  width: 6rem;
+  height: 6rem;
+  background: #e3c1ce;
+}
+.pink_left_tulip {
+  border-left: 5rem solid #e3c1ce; 
+  margin-top: -1.875rem;
+}
+.pink_right_tulip {
+  border-right: 5rem solid #e3c1ce; 
+  margin-top: -5rem;
+  margin-left: 1rem;
+}
+.pink_middle_tulip {
+  border-left: 3rem solid transparent;
+  border-right: 3rem solid transparent; 
+  border-bottom: 5rem solid #e3c1ce; 
+}
+
+.fadeIn {
+  opacity: 0;
+  -webkit-animation: fadeIn 1s 2s ease-in forwards;
+          animation: fadeIn 1s 2s ease-in forwards;
+}
+
+.slideIn {
+  transform: translateX(-5rem);
+  -webkit-animation: slideIn 3s ease-out forwards;
+          animation: slideIn 3s ease-out forwards;
+}
+
+.fadeOut {
+  opacity: 1;
+  -webkit-animation: fadeOut 4s 0.25s ease forwards;
+          animation: fadeOut 4s 0.25s ease forwards;
+}
+
+.delay-1 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.grow-12 {
+  -webkit-animation: grow-12 2s 0.5s ease-in-out forwards;
+          animation: grow-12 2s 0.5s ease-in-out forwards;
+}
+
+.grow-15 {
+  -webkit-animation: grow-15 2s 1.5s ease-in-out forwards;
+          animation: grow-15 2s 1.5s ease-in-out forwards;
+}
+
+.grow-9 {
+  -webkit-animation: grow-9 2s 2.5s ease-in-out forwards;
+          animation: grow-9 2s 2.5s ease-in-out forwards;
+}
+
+.pulse {
+  -webkit-animation: pulse 1s 0.5s ease-in-out infinite alternate;
+          animation: pulse 1s 0.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideIn {
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes grow-12 {
+  100% {
+    max-height: 14rem;
+  }
+}
+@keyframes grow-12 {
+  100% {
+    max-height: 14rem;
+  }
+}
+@-webkit-keyframes grow-15 {
+  100% {
+    max-height: 17rem;
+  }
+}
+@keyframes grow-15 {
+  100% {
+    max-height: 17rem;
+  }
+}
+@-webkit-keyframes grow-9 {
+  100% {
+    max-height: 11rem;
+  }
+}
+@keyframes grow-9 {
+  100% {
+    max-height: 11rem;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.777rem;
+  }
+
+  h2 {
+    font-size: 1.777rem;
+  }
+}
+
+#background-wrap {
+  bottom: 0;
+	left: 0;
+	padding-top: 7.5rem;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+@-webkit-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+.x1 {
+	-webkit-animation: animateCloud 35s linear infinite;
+	-moz-animation: animateCloud 35s linear infinite;
+	animation: animateCloud 35s linear infinite;
+	
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
+}
+
+.x2 {
+	-webkit-animation: animateCloud 20s linear infinite;
+	-moz-animation: animateCloud 20s linear infinite;
+	animation: animateCloud 20s linear infinite;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x3 {
+	-webkit-animation: animateCloud 30s linear infinite;
+	-moz-animation: animateCloud 30s linear infinite;
+	animation: animateCloud 30s linear infinite;
+	
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.x4 {
+	-webkit-animation: animateCloud 18s linear infinite;
+	-moz-animation: animateCloud 18s linear infinite;
+	animation: animateCloud 18s linear infinite;
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x5 {
+	-webkit-animation: animateCloud 25s linear infinite;
+	-moz-animation: animateCloud 25s linear infinite;
+	animation: animateCloud 25s linear infinite;
+	
+	-webkit-transform: scale(0.55);
+	-moz-transform: scale(0.55);
+	transform: scale(0.55);
+}
+
+.cloud {
+	background: #fff;
+	background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,#f1f1f1));
+	background: -webkit-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -o-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -ms-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+	
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+
+	height: 120px;
+	position: relative;
+	width: 350px;
+}
+
+.cloud:after, .cloud:before {
+  background: #fff;
+	content: '';
+	position: absolute;
+	z-indeX: -1;
+}
+
+.cloud:after {
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+
+	height: 100px;
+	left: 50px;
+	top: -50px;
+	width: 100px;
+}
+
+.cloud:before {
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	border-radius: 200px;
+
+	width: 180px;
+	height: 180px;
+	right: 50px;
+	top: -90px;
+}
